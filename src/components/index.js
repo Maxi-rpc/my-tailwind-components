@@ -1,1 +1,1 @@
-export { GridComponent } from "./layouts";
+export { GridComponent, HeaderComponent } from "./layouts";
