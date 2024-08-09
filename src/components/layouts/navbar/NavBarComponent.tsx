@@ -145,9 +145,9 @@ export const NavBarComponent = ({
 								</div>
 							</PopoverPanel>
 						</Popover>
-						<NavItemComponent url="#">Features</NavItemComponent>
-						<NavItemComponent url="#">Marketplace</NavItemComponent>
-						<NavItemComponent url="#">Company</NavItemComponent>
+						<NavItemComponent href="#">Features</NavItemComponent>
+						<NavItemComponent href="#">Marketplace</NavItemComponent>
+						<NavItemComponent href="#">Company</NavItemComponent>
 					</PopoverGroup>
 					<div className="hidden lg:flex lg:flex-1 lg:justify-end">
 						<a

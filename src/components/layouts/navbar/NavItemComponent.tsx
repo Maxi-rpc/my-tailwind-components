@@ -1,25 +1,24 @@
-import { link } from "fs";
+import Link from "next/link";
 
 interface NavItemProps {
 	children?: React.ReactNode;
 	customClass?: React.ComponentProps<"div">["className"];
-	container?: boolean;
-	title?: string;
-	url?: string;
+	href?: string;
 }
 
 export const NavItemComponent = ({
 	children,
 	customClass = "",
-	container = false,
-	title,
-	url,
+	href = "",
 }: NavItemProps) => {
 	return (
 		<>
-			<a href={url} className="text-sm font-semibold leading-6 text-gray-900">
+			<Link
+				href={href}
+				className="text-sm font-semibold leading-6 text-gray-900"
+			>
 				{children}
-			</a>
+			</Link>
 		</>
 	);
 };
