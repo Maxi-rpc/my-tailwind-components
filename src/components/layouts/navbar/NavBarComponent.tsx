@@ -70,7 +70,10 @@ export const NavBarComponent = ({
 					aria-label="Global"
 					className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
 				>
-					<NavBarLogoComponent></NavBarLogoComponent>
+					<NavBarLogoComponent
+						src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+						alt="logotemplate"
+					></NavBarLogoComponent>
 					<div className="flex lg:hidden">
 						<button
 							type="button"
