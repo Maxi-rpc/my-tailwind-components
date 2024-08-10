@@ -4,6 +4,7 @@ import { useState } from "react";
 import { NavItemComponent } from "./NavItemComponent";
 import { NavDropdownComponent } from "./NavDropdownComponent";
 import { NavBarLogoComponent } from "./NavBarLogoComponent";
+import { SesionSectionComponent } from "./sesion";
 import {
 	Dialog,
 	DialogPanel,
@@ -73,7 +74,7 @@ export const NavBarComponent = ({
 					<NavBarLogoComponent
 						src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
 						alt="logotemplate"
-					></NavBarLogoComponent>
+					/>
 					<div className="flex lg:hidden">
 						<button
 							type="button"
@@ -90,14 +91,7 @@ export const NavBarComponent = ({
 						<NavItemComponent href="#">Marketplace</NavItemComponent>
 						<NavItemComponent href="#">Company</NavItemComponent>
 					</PopoverGroup>
-					<div className="hidden lg:flex lg:flex-1 lg:justify-end">
-						<a
-							href="#"
-							className="text-sm font-semibold leading-6 text-gray-900"
-						>
-							Log in <span aria-hidden="true">&rarr;</span>
-						</a>
-					</div>
+					<SesionSectionComponent />
 				</nav>
 				<Dialog
 					open={mobileMenuOpen}

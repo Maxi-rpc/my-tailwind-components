@@ -1,0 +1,1 @@
+export { SesionSectionComponent } from './SesionSectionComponent'
