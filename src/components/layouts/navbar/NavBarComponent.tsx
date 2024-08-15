@@ -1,12 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { NavItemComponent } from "./NavItemComponent";
 import { NavDropdownComponent } from "./NavDropdownComponent";
-import { NavBarLogoComponent } from "./NavBarLogoComponent";
-import { SesionSectionComponent } from "./sesion";
-import { NavItemMobileComponent } from "./NavItemMobileComponent";
-import { NavBarLogoMobileComponent } from "./NavBarLogoMobileComponent";
+import { SesionSectionComponent, SesionSectioMobilenComponent } from "./sesion";
+import { NavItemComponent, NavItemMobileComponent } from "./item";
+import { NavBarLogoComponent, NavBarLogoMobileComponent } from "./logo";
 import {
 	Dialog,
 	DialogPanel,
@@ -157,14 +155,7 @@ export const NavBarComponent = ({
 										</NavItemMobileComponent>
 									))}
 								</div>
-								<div className="py-6">
-									<a
-										href="#"
-										className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-									>
-										Log in
-									</a>
-								</div>
+								<SesionSectioMobilenComponent />
 							</div>
 						</div>
 					</DialogPanel>

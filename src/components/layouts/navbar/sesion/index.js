@@ -1,1 +1,2 @@
-export { SesionSectionComponent } from './SesionSectionComponent'
+export { SesionSectionComponent } from "./SesionSectionComponent";
+export { SesionSectioMobilenComponent } from "./SesionSectionMobileComponent";
