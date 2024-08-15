@@ -5,24 +5,19 @@ import { NavItemComponent } from "./NavItemComponent";
 import { NavDropdownComponent } from "./NavDropdownComponent";
 import { NavBarLogoComponent } from "./NavBarLogoComponent";
 import { SesionSectionComponent } from "./sesion";
+import { NavItemMobileComponent } from "./NavItemMobileComponent";
 import {
 	Dialog,
 	DialogPanel,
 	Disclosure,
 	DisclosureButton,
 	DisclosurePanel,
-	Popover,
-	PopoverButton,
 	PopoverGroup,
-	PopoverPanel,
 } from "@headlessui/react";
 import {
-	ArrowPathIcon,
 	Bars3Icon,
 	ChartPieIcon,
 	CursorArrowRaysIcon,
-	FingerPrintIcon,
-	SquaresPlusIcon,
 	XMarkIcon,
 } from "@heroicons/react/24/outline";
 import {
@@ -37,6 +32,20 @@ interface HeaderProps {
 	container?: boolean;
 }
 
+const menuLinks = [
+	{
+		name: "Features",
+		href: "#",
+	},
+	{
+		name: "Marketplace",
+		href: "#",
+	},
+	{
+		name: "Company",
+		href: "#",
+	},
+];
 const products = [
 	{
 		name: "Analytics",
@@ -75,6 +84,16 @@ export const NavBarComponent = ({
 						src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
 						alt="logotemplate"
 					/>
+					<PopoverGroup className="hidden lg:flex lg:gap-x-12">
+						<NavDropdownComponent></NavDropdownComponent>
+						{menuLinks.map((item) => (
+							<NavItemComponent key={item.name} href={item.href}>
+								{item.name}
+							</NavItemComponent>
+						))}
+					</PopoverGroup>
+					<SesionSectionComponent />
+					{/* mobile menu */}
 					<div className="flex lg:hidden">
 						<button
 							type="button"
@@ -85,13 +104,6 @@ export const NavBarComponent = ({
 							<Bars3Icon aria-hidden="true" className="h-6 w-6" />
 						</button>
 					</div>
-					<PopoverGroup className="hidden lg:flex lg:gap-x-12">
-						<NavDropdownComponent></NavDropdownComponent>
-						<NavItemComponent href="#">Features</NavItemComponent>
-						<NavItemComponent href="#">Marketplace</NavItemComponent>
-						<NavItemComponent href="#">Company</NavItemComponent>
-					</PopoverGroup>
-					<SesionSectionComponent />
 				</nav>
 				<Dialog
 					open={mobileMenuOpen}
@@ -142,24 +154,11 @@ export const NavBarComponent = ({
 											))}
 										</DisclosurePanel>
 									</Disclosure>
-									<a
-										href="#"
-										className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-									>
-										Features
-									</a>
-									<a
-										href="#"
-										className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-									>
-										Marketplace
-									</a>
-									<a
-										href="#"
-										className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-									>
-										Company
-									</a>
+									{menuLinks.map((item) => (
+										<NavItemMobileComponent key={item.name} href={item.href}>
+											{item.name}
+										</NavItemMobileComponent>
+									))}
 								</div>
 								<div className="py-6">
 									<a
