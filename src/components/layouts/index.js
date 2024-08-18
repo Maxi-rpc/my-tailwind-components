@@ -1,3 +1,3 @@
-export { GridComponent } from "./GridComponent";
+export { GridComponent } from "./grid";
 export { HeaderComponent } from "./HeaderComponent";
 export { NavBarComponent } from "./navbar";
