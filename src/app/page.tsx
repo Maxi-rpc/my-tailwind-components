@@ -1,5 +1,4 @@
-import Image from "next/image";
-import { GridComponent, HeaderComponent, NavBarComponent } from "@/components";
+import { GridComponent, NavBarComponent, SpaceComponent } from "@/components";
 
 export default function Home() {
 	return (
@@ -22,6 +21,7 @@ export default function Home() {
 					<div className="p-1">04 item</div>
 				</GridComponent>
 			</GridComponent>
+			<SpaceComponent />
 			<GridComponent container>
 				<GridComponent item customClass="bg-slate-400">
 					<div className="p-1">Row unico</div>

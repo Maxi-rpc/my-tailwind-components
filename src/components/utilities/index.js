@@ -1,0 +1,1 @@
+export { SpaceComponent } from "./SpaceComponent";

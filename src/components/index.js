@@ -1,1 +1,2 @@
-export { GridComponent, HeaderComponent, NavBarComponent } from "./layouts";
+export { GridComponent, NavBarComponent } from "./layouts";
+export { SpaceComponent } from "./utilities";
