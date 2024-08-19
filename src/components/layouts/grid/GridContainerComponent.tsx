@@ -1,23 +1,22 @@
 interface GridContainerProps {
 	children?: React.ReactNode;
 	customClass?: React.ComponentProps<"div">["className"];
-	container?: boolean;
-	cols?: string;
 	gap?: string;
 }
 
 export const GridContainerComponent = ({
 	children,
 	customClass = "",
-	container = false,
-	cols = "1",
-	gap = "4",
+	gap = "5",
 }: GridContainerProps) => {
-	const isContainer = container && "px-5";
-	const cssClass = `${isContainer} grid grid-cols-${cols} gap-${gap} ${customClass}`;
+	const cssClass = customClass;
 	return (
 		<>
-			<div className={cssClass}>{children}</div>
+			<div
+				className={`px-2 grid gap-${gap} grid-flow-col auto-cols-auto  ${cssClass}`}
+			>
+				{children}
+			</div>
 		</>
 	);
 };

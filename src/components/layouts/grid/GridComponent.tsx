@@ -1,31 +1,42 @@
 import { GridContainerComponent } from "./GridContainerComponent";
+import { GridItemComponent } from "./GridItemComponent";
 
 interface GridProps {
 	children?: React.ReactNode;
 	customClass?: React.ComponentProps<"div">["className"];
 	container?: boolean;
-	cols?: string;
 	gap?: string;
 	item?: boolean;
+	itemRow?: boolean;
+	itemColumn?: boolean;
 }
 
 export const GridComponent = ({
 	children,
 	customClass = "",
 	container = false,
-	cols = "4",
-	gap = "4",
+	gap,
 	item,
+	itemRow,
+	itemColumn,
 }: GridProps) => {
 	if (container) {
 		return (
 			<>
-				<GridContainerComponent container cols={cols} gap={gap}>
+				<GridContainerComponent customClass={customClass} gap={gap}>
 					{children}
 				</GridContainerComponent>
 			</>
 		);
 	} else {
-		return <>{children}</>;
+		return (
+			<GridItemComponent
+				customClass={customClass}
+				row={itemRow}
+				column={itemColumn}
+			>
+				{children}
+			</GridItemComponent>
+		);
 	}
 };

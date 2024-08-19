@@ -6,18 +6,25 @@ export default function Home() {
 		<main>
 			<NavBarComponent></NavBarComponent>
 			<h1>Body</h1>
-			<GridComponent container cols="4">
-				<GridComponent item>
-					<div className="bg-red-400 p-1">01</div>
+			<GridComponent container>
+				<GridComponent item customClass="bg-red-400">
+					<div className="p-1">01 item</div>
+					<div className="p-1">01 item</div>
+					<div className="p-1">01 item</div>
 				</GridComponent>
-				<GridComponent item>
-					<div className="bg-blue-400 p-1">02</div>
+				<GridComponent item customClass="bg-blue-400">
+					<div className="p-1">02 item</div>
 				</GridComponent>
-				<GridComponent item>
-					<div className="bg-green-400 p-1">03</div>
+				<GridComponent item customClass="bg-green-400">
+					<div className="p-1">03 item</div>
 				</GridComponent>
-				<GridComponent item>
-					<div className="bg-slate-400 p-1">04</div>
+				<GridComponent item customClass="bg-slate-400">
+					<div className="p-1">04 item</div>
+				</GridComponent>
+			</GridComponent>
+			<GridComponent container>
+				<GridComponent item customClass="bg-slate-400">
+					<div className="p-1">Row unico</div>
 				</GridComponent>
 			</GridComponent>
 		</main>
