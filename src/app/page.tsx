@@ -1,4 +1,9 @@
-import { GridComponent, NavBarComponent, SpaceComponent } from "@/components";
+import {
+	GridComponent,
+	NavBarComponent,
+	SpaceComponent,
+	CardComponent,
+} from "@/components";
 
 export default function Home() {
 	return (
@@ -25,6 +30,12 @@ export default function Home() {
 			<GridComponent container>
 				<GridComponent item customClass="bg-slate-400">
 					<div className="p-1">Row unico</div>
+				</GridComponent>
+			</GridComponent>
+			<SpaceComponent />
+			<GridComponent container>
+				<GridComponent item>
+					<CardComponent></CardComponent>
 				</GridComponent>
 			</GridComponent>
 		</main>
