@@ -5,7 +5,6 @@ interface GridProps {
 	children?: React.ReactNode;
 	customClass?: React.ComponentProps<"div">["className"];
 	container?: boolean;
-	gap?: string;
 	item?: boolean;
 	itemRow?: boolean;
 	itemColumn?: boolean;
@@ -15,7 +14,6 @@ export const GridComponent = ({
 	children,
 	customClass = "",
 	container = false,
-	gap,
 	item,
 	itemRow,
 	itemColumn,
@@ -23,7 +21,7 @@ export const GridComponent = ({
 	if (container) {
 		return (
 			<>
-				<GridContainerComponent customClass={customClass} gap={gap}>
+				<GridContainerComponent customClass={customClass}>
 					{children}
 				</GridContainerComponent>
 			</>
