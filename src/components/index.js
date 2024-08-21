@@ -5,3 +5,4 @@ export {
 	CardContentComponent,
 	CardFooterComponent,
 } from "./cards";
+export { ButtonComponent } from "./buttons";

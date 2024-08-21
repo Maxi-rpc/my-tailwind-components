@@ -5,6 +5,7 @@ import {
 	CardComponent,
 	CardContentComponent,
 	CardFooterComponent,
+	ButtonComponent,
 } from "@/components";
 
 export default function Home() {
@@ -14,7 +15,7 @@ export default function Home() {
 			<h1>Body</h1>
 			<GridComponent container>
 				<GridComponent item customClass="bg-red-400 col-span-2">
-					<div className="p-1">01 item</div>
+					<ButtonComponent>Button 1</ButtonComponent>
 				</GridComponent>
 				<GridComponent item customClass="bg-blue-400 col-span-2">
 					<div className="p-1">02 item</div>
