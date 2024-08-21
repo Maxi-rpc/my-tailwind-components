@@ -15,7 +15,9 @@ export const GridItemComponent = ({
 	const rowOrColumn = row ? "flex-row" : "flex-col";
 	return (
 		<>
-			<div className={`flex ${rowOrColumn} justify-around ${cssClass}`}>
+			<div
+				className={`p-4 flex ${rowOrColumn} justify-around ${cssClass}`}
+			>
 				{children}
 			</div>
 		</>

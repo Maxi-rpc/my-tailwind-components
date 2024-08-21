@@ -6,7 +6,7 @@ export default function Home() {
 			<NavBarComponent></NavBarComponent>
 			<h1>Body</h1>
 			<GridComponent container>
-				<GridComponent item customClass="bg-red-400">
+				<GridComponent item customClass="bg-red-400 col-span-4">
 					<div className="p-1">01 item</div>
 					<div className="p-1">01 item</div>
 					<div className="p-1">01 item</div>
@@ -23,7 +23,7 @@ export default function Home() {
 			</GridComponent>
 			<SpaceComponent />
 			<GridComponent container>
-				<GridComponent item customClass="bg-slate-400">
+				<GridComponent item customClass="bg-slate-400 col-span-2">
 					<div className="p-1">Row unico</div>
 				</GridComponent>
 			</GridComponent>
