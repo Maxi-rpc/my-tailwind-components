@@ -1,17 +1,15 @@
 interface ExampleProps {
 	children?: React.ReactNode;
 	customClass?: React.ComponentProps<"div">["className"];
-	name?: string;
 }
 
 export const ExampleComponent = ({
 	children,
-	customClass = "",
-	name = "",
+	customClass,
 }: ExampleProps) => {
 	return (
 		<>
-			<div className="">
+			<div className={`${customClass}`}>
 				<h1>Example Component</h1>
 			</div>
 		</>

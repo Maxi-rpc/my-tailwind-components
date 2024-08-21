@@ -1,3 +1,7 @@
 export { GridComponent, NavBarComponent } from "./layouts";
 export { SpaceComponent } from "./utilities";
-export { CardComponent } from './cards'
+export {
+	CardComponent,
+	CardContentComponent,
+	CardFooterComponent,
+} from "./cards";
