@@ -1,3 +1,4 @@
+'use client'
 import {
 	GridComponent,
 	NavBarComponent,
@@ -12,16 +13,20 @@ export default function Home() {
 	return (
 		<main>
 			<NavBarComponent></NavBarComponent>
-			<h1>Body</h1>
 			<GridComponent container>
 				<GridComponent item customClass="bg-red-400 col-span-2">
-					<ButtonComponent>Button 1</ButtonComponent>
+					<ButtonComponent
+						onClick={() => console.log("click en button 1")}
+						type="contained"
+					>
+						Button 1
+					</ButtonComponent>
 				</GridComponent>
 				<GridComponent item customClass="bg-blue-400 col-span-2">
-					<div className="p-1">02 item</div>
+					<ButtonComponent type="outlined">Button 2</ButtonComponent>
 				</GridComponent>
 				<GridComponent item customClass="bg-green-400 col-span-2">
-					<div className="p-1">03 item</div>
+					<ButtonComponent>Button 3</ButtonComponent>
 				</GridComponent>
 				<GridComponent item customClass="bg-slate-400 col-span-2">
 					<div className="p-1">04 item</div>
