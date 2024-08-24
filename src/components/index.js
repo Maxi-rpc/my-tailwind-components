@@ -1,10 +1,12 @@
 export { GridComponent, NavBarComponent } from "./layouts";
-export { SpaceComponent } from "./utilities";
 export {
+	BadgeComponent,
+	ButtonComponent,
 	CardComponent,
 	CardContentComponent,
 	CardFooterComponent,
-} from "./cards";
-export { ButtonComponent } from "./buttons";
-export { FormExampleComponent } from "./forms";
-export { BadgeComponent } from "./ui";
+	SpaceComponent,
+	TextInputComponent,
+	TextPathInputComponent,
+	TextAreaInputComponent,
+} from "./ui";
