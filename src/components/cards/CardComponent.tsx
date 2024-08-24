@@ -8,7 +8,7 @@ const bgColor = "bg-neutral-900 text-white";
 export const CardComponent = ({ children, customClass = "" }: CardProps) => {
 	return (
 		<>
-			<div className={`min-w-60 rounded bg-white ${customClass}`}>{children}</div>
+			<div className={`min-w-60 rounded bg-white text-gray-900 ${customClass}`}>{children}</div>
 		</>
 	);
 };
