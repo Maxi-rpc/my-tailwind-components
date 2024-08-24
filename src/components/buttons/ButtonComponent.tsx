@@ -1,53 +1,41 @@
-import { ButtonContainedComponent } from "./ButtonContainedComponent";
-import { ButtonOutlinedComponent } from "./ButtonOutlinedComponent";
+const cssBtn = "rounded-md px-3 py-2 text-sm font-semibold shadow-sm";
+const cssContained =
+	cssBtn +
+	" " +
+	"text-white shadow-sm bg-indigo-600 hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600";
+const cssOutlined = cssBtn + " " + "text-gray-900 bg-white hover:bg-gray-50";
+const cssDefault = cssBtn + " " + "font-semibold leading-6 text-gray-900";
 
-const cssContained = "text-white bg-indigo-600 hover:bg-indigo-500";
-const cssOutlined = "text-gray-900 bg-white hover:bg-gray-50";
-
-interface ButtonProps {
-	children?: React.ReactNode;
-	customClass?: React.ComponentProps<"div">["className"];
-	type?: string;
-	name?: string;
-	id?: string;
-	onClick?: React.MouseEventHandler<HTMLButtonElement>;
+interface BtnProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+	title: string;
+	showIcon?: boolean;
+	btnStyle?: string;
 }
 
 export const ButtonComponent = ({
 	children,
-	customClass,
-	type,
-	name,
-	id,
-	onClick,
-}: ButtonProps) => {
-	switch (type) {
+	title,
+	showIcon,
+	btnStyle,
+	...props
+}: BtnProps) => {
+	switch (btnStyle) {
 		case "contained":
 			return (
-				<ButtonContainedComponent
-					name={name}
-					id={id}
-					onClick={onClick}
-					customClass={cssContained + customClass}
-				>
-					{children}
-				</ButtonContainedComponent>
+				<button className={cssContained} {...props}>
+					{title}
+				</button>
 			);
 		case "outlined":
 			return (
-				<ButtonOutlinedComponent
-					name={name}
-					id={id}
-					onClick={onClick}
-					customClass={cssOutlined + customClass}
-				>
-					{children}
-				</ButtonOutlinedComponent>
+				<button className={cssOutlined} {...props}>
+					{title}
+				</button>
 			);
 		default:
 			return (
-				<button name={name} id={id} onClick={onClick} className={customClass}>
-					{children}
+				<button className={cssDefault} {...props}>
+					{title}
 				</button>
 			);
 	}

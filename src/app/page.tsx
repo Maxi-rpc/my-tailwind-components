@@ -20,10 +20,9 @@ export default function Home() {
 				<GridComponent item customClass="bg-blue-400 col-span-6">
 					<FormExampleComponent></FormExampleComponent>
 				</GridComponent>
-				<GridComponent
-					item
-					customClass="bg-green-400 col-span-3"
-				></GridComponent>
+				<GridComponent item customClass="bg-green-400 col-span-3">
+					<ButtonComponent title="Btn con props"></ButtonComponent>
+				</GridComponent>
 			</GridComponent>
 		</main>
 	);
