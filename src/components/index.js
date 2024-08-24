@@ -6,3 +6,4 @@ export {
 	CardFooterComponent,
 } from "./cards";
 export { ButtonComponent } from "./buttons";
+export { FormExampleComponent } from "./forms";
