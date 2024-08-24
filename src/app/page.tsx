@@ -8,6 +8,7 @@ import {
 	CardFooterComponent,
 	ButtonComponent,
 	FormExampleComponent,
+	BadgeComponent,
 } from "@/components";
 
 export default function Home() {
@@ -16,7 +17,11 @@ export default function Home() {
 			<NavBarComponent></NavBarComponent>
 			<SpaceComponent />
 			<GridComponent container>
-				<GridComponent item customClass="bg-red-400 col-span-3"></GridComponent>
+				<GridComponent item customClass="bg-red-400 col-span-3">
+					<h1>
+						Es un <BadgeComponent>Badge</BadgeComponent>
+					</h1>
+				</GridComponent>
 				<GridComponent
 					item
 					customClass="bg-blue-400 col-span-6"

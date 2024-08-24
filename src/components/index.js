@@ -7,3 +7,4 @@ export {
 } from "./cards";
 export { ButtonComponent } from "./buttons";
 export { FormExampleComponent } from "./forms";
+export { BadgeComponent } from "./ui";
