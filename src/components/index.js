@@ -9,4 +9,5 @@ export {
 	TextInputComponent,
 	TextPathInputComponent,
 	TextAreaInputComponent,
+	DialogComponent,
 } from "./ui";

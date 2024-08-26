@@ -4,6 +4,7 @@ import {
 	TextInputComponent,
 	RowComponent,
 	ButtonComponent,
+	DialogComponent,
 } from "@/components";
 
 export default function Register() {
@@ -66,6 +67,7 @@ export default function Register() {
 					</p>
 				</div>
 			</div>
+			<DialogComponent></DialogComponent>
 		</main>
 	);
 }
