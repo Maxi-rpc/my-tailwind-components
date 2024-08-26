@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { AppLogo } from "@/constant";
 import {
 	TextInputComponent,
@@ -39,12 +40,12 @@ export default function Login() {
 									Password
 								</label>
 								<div className="text-sm">
-									<a
+									<Link
 										href="#"
 										className="font-semibold text-indigo-600 hover:text-indigo-500"
 									>
 										Forgot password?
-									</a>
+									</Link>
 								</div>
 							</RowComponent>
 							<div className="mt-2">
@@ -69,12 +70,12 @@ export default function Login() {
 
 					<p className="mt-10 text-center text-sm text-gray-500">
 						Not a member?{" "}
-						<a
+						<Link
 							href="#"
 							className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
 						>
 							Start a 14 day free trial
-						</a>
+						</Link>
 					</p>
 				</div>
 			</div>
