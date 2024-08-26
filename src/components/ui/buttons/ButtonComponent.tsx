@@ -9,32 +9,35 @@ const cssDefault = cssBtn + " " + "font-semibold leading-6 text-gray-900";
 interface BtnProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	title: string;
 	showIcon?: boolean;
-	btnStyle?: string;
+	variant?: "contained" | "outlined" | "default";
+	fullWidth?: boolean;
 }
 
 export const ButtonComponent = ({
 	children,
 	title,
 	showIcon,
-	btnStyle,
+	variant,
+	fullWidth = false,
 	...props
 }: BtnProps) => {
-	switch (btnStyle) {
+	const isFullWidth = fullWidth ? "w-full" : "";
+	switch (variant) {
 		case "contained":
 			return (
-				<button className={cssContained} {...props}>
+				<button className={cssContained + " " + isFullWidth} {...props}>
 					{title}
 				</button>
 			);
 		case "outlined":
 			return (
-				<button className={cssOutlined} {...props}>
+				<button className={cssOutlined + " " + isFullWidth} {...props}>
 					{title}
 				</button>
 			);
 		default:
 			return (
-				<button className={cssDefault} {...props}>
+				<button className={cssDefault + " " + isFullWidth} {...props}>
 					{title}
 				</button>
 			);
