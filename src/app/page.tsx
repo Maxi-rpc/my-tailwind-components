@@ -3,7 +3,6 @@ import {
 	GridComponent,
 	NavBarComponent,
 	SpaceComponent,
-	BadgeComponent,
 } from "@/components";
 
 export default function Home() {
