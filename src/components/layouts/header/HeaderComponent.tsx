@@ -9,8 +9,16 @@ import {
 	MenuButton,
 	MenuItem,
 	MenuItems,
+	Popover,
+	PopoverButton,
+	PopoverPanel,
 } from "@headlessui/react";
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import {
+	Bars3Icon,
+	BellIcon,
+	ChevronDownIcon,
+	XMarkIcon,
+} from "@heroicons/react/24/outline";
 import { HeaderPageComponent } from "@/components";
 // routes
 import { menuRoutes } from "@/routes";
@@ -26,6 +34,19 @@ const userNavigation = [
 	{ name: "Your Profile", href: "#" },
 	{ name: "Settings", href: "#" },
 	{ name: "Sign out", href: "#" },
+];
+
+const products = [
+	{
+		name: "Analytics",
+		description: "Get a better understanding of your traffic",
+		href: "#",
+	},
+	{
+		name: "Engagement",
+		description: "Speak directly to your customers",
+		href: "#",
+	},
 ];
 
 interface HeaderProps {
@@ -69,6 +90,48 @@ export const HeaderComponent = ({ children, customClass }: HeaderProps) => {
 											{item.name}
 										</Link>
 									))}
+									<Popover className="relative">
+										<PopoverButton className="flex items-center gap-x-1 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">
+											Product
+											<ChevronDownIcon
+												aria-hidden="true"
+												className="h-5 w-5 flex-none text-gray-400"
+											/>
+										</PopoverButton>
+
+										<PopoverPanel
+											transition
+											className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
+										>
+											<div className="p-4">
+												{products.map((item) => (
+													<div
+														key={item.name}
+														className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
+													>
+														<div className="flex-auto">
+															<Link
+																href={item.href}
+																className="block font-semibold text-gray-900"
+															>
+																{item.name}
+																<span className="absolute inset-0" />
+															</Link>
+															<p className="mt-1 text-gray-600">
+																{item.description}
+															</p>
+														</div>
+													</div>
+												))}
+											</div>
+										</PopoverPanel>
+									</Popover>
+									<Link
+										href="#"
+										className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+									>
+										Features
+									</Link>
 								</div>
 							</div>
 						</div>
