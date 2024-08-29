@@ -1,4 +1,10 @@
-export { GridComponent, NavBarComponent, RowComponent } from "./layouts";
+export {
+	GridComponent,
+	NavBarComponent,
+	RowComponent,
+	HeaderComponent,
+	HeaderPageComponent,
+} from "./layouts";
 export {
 	BadgeComponent,
 	ButtonComponent,
