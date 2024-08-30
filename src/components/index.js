@@ -1,6 +1,5 @@
 export {
 	GridComponent,
-	NavBarComponent,
 	RowComponent,
 	HeaderComponent,
 	HeaderPageComponent,
