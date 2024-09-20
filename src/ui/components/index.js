@@ -10,6 +10,6 @@ export {
 	TextInputComponent,
 	TextPathInputComponent,
 	TextAreaInputComponent,
-} from "./forms";
+} from "../../components/ui/forms";
 export { DialogComponent } from "./dialogs";
 export { SpaceComponent } from "./utilities";
