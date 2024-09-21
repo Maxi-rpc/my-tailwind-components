@@ -1,3 +1,5 @@
+// forms
+export { TextInputComponent } from "./forms";
 export { BadgeComponent } from "./badges";
 export { ButtonComponent } from "./buttons";
 export {
@@ -5,11 +7,5 @@ export {
 	CardContentComponent,
 	CardFooterComponent,
 } from "./cards";
-export {
-	FormExampleComponent,
-	TextInputComponent,
-	TextPathInputComponent,
-	TextAreaInputComponent,
-} from "../../components/ui/forms";
 export { DialogComponent } from "./dialogs";
 export { SpaceComponent } from "./utilities";
