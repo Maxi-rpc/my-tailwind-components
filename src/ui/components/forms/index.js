@@ -1,2 +1,2 @@
-export { TextInputComponent } from "./text";
+export { InputComponent } from "./text";
 export { LabelComponent } from "./label";

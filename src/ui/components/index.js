@@ -1,5 +1,5 @@
 // forms
-export { LabelComponent, TextInputComponent } from "./forms";
+export { LabelComponent, InputComponent } from "./forms";
 export { BadgeComponent } from "./badges";
 export { ButtonComponent } from "./buttons";
 export {
