@@ -5,6 +5,7 @@ import {
 	ButtonComponent,
 	LinkComponent,
 } from "@/ui/components";
+import { RowComponent } from "@/ui/layout";
 
 export default function Login() {
 	return (
@@ -31,12 +32,12 @@ export default function Login() {
 						</div>
 					</div>
 					<div>
-						<div className="flex items-center justify-between">
+						<RowComponent>
 							<LabelComponent htmlFor="password">Password</LabelComponent>
 							<div className="text-sm">
 								<LinkComponent href="#">Forgot password?</LinkComponent>
 							</div>
-						</div>
+						</RowComponent>
 						<div className="mt-2">
 							<InputComponent
 								id="password"

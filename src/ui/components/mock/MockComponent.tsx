@@ -1,12 +1,6 @@
-interface ExampleProps {
-	children?: React.ReactNode;
-	customClass?: React.ComponentProps<"div">["className"];
-}
+import { ExampleProps } from "./Type";
 
-export const ExampleComponent = ({
-	children,
-	customClass,
-}: ExampleProps) => {
+export const ExampleComponent = ({ children, customClass }: ExampleProps) => {
 	return (
 		<>
 			<div className={`${customClass}`}>
