@@ -5,6 +5,7 @@ export const RowComponent = ({
 	customClass,
 	itemsAlign = "center",
 	justify = "between",
+	className,
 }: RowProps) => {
 	const itemVariant = {
 		start: "items-start",
@@ -28,7 +29,7 @@ export const RowComponent = ({
 	return (
 		<>
 			<div
-				className={`${customClass} flex ${itemVariant[itemsAlign]} ${justifyVariant[justify]}`}
+				className={`${className} flex ${itemVariant[itemsAlign]} ${justifyVariant[justify]}`}
 			>
 				{children}
 			</div>
