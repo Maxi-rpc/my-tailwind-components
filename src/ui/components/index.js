@@ -9,3 +9,4 @@ export {
 } from "./cards";
 export { DialogComponent } from "./dialogs";
 export { SpaceComponent } from "./utilities";
+export { LinkComponent } from "./link";
