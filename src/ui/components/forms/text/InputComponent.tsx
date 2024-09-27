@@ -4,7 +4,7 @@ interface InputProps extends React.HTMLAttributes<HTMLInputElement> {
 	customClass?: React.ComponentProps<"div">["className"];
 	id?: string;
 	name?: string;
-	type?: "email" | "password" | "text" | "number";
+	type?: React.HTMLInputTypeAttribute;
 	autoComplete?: string;
 	required?: boolean;
 }
