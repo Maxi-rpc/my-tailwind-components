@@ -1,13 +1,4 @@
-//import { TextInputProps } from "./type";
-interface InputProps extends React.HTMLAttributes<HTMLInputElement> {
-	children?: React.ReactNode;
-	customClass?: React.ComponentProps<"div">["className"];
-	id?: string;
-	name?: string;
-	type?: React.HTMLInputTypeAttribute;
-	autoComplete?: string;
-	required?: boolean;
-}
+import { InputProps } from "./type";
 
 export const InputComponent = ({
 	children,
