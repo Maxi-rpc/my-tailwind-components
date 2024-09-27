@@ -1,8 +1,4 @@
-interface LabelProps {
-	children?: React.ReactNode;
-	customClass?: React.ComponentProps<"div">["className"];
-	htmlFor?: string;
-}
+import { LabelProps } from "./type";
 
 export const LabelComponent = ({
 	children,
