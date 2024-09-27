@@ -53,7 +53,7 @@ export default function Login() {
 					</div>
 
 					<div>
-						<ButtonComponent fullWidth type="submit">
+						<ButtonComponent variant="contained" fullWidth type="submit">
 							Sign in
 						</ButtonComponent>
 					</div>

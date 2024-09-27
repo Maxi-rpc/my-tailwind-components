@@ -1,5 +1,5 @@
 export interface ButtonProps
 	extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-	variant?: "contained" | "outlined" | "default";
+	variant?: "contained" | "outlined";
 	fullWidth?: boolean;
 }
