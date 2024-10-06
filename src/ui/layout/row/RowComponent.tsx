@@ -2,9 +2,9 @@ import { RowProps } from "./Type";
 
 export const RowComponent = ({
 	children,
-	customClass,
-	itemsAlign = "center",
-	justify = "between",
+	itemsAlign,
+	justify,
+	direction = "row",
 	className,
 }: RowProps) => {
 	const itemVariant = {
@@ -26,10 +26,17 @@ export const RowComponent = ({
 		stretch: "justify-stretch",
 	};
 
+	const directionVariant = {
+		row: "flex-row",
+		row_reverse: "flex-row-reverse",
+		column: "flex-col",
+		column_reverse: "flex-col-reverse",
+	};
+
 	return (
 		<>
 			<div
-				className={`${className} flex ${itemVariant[itemsAlign]} ${justifyVariant[justify]}`}
+				className={`${className} flex ${directionVariant[direction]} ${itemVariant[itemsAlign]} ${justifyVariant[justify]}`}
 			>
 				{children}
 			</div>

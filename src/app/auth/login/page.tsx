@@ -19,9 +19,9 @@ export default function Login() {
 
 			<div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
 				<form action="#" method="POST" className="space-y-6">
-					<div>
+					<RowComponent direction="column" className="w-full">
 						<LabelComponent htmlFor="email">Email address</LabelComponent>
-						<div className="mt-2">
+						<RowComponent className="mt-2">
 							<InputComponent
 								id="email"
 								name="email"
@@ -29,16 +29,16 @@ export default function Login() {
 								autoComplete="email"
 								required
 							/>
-						</div>
-					</div>
-					<div>
-						<RowComponent>
-							<LabelComponent htmlFor="password">Password</LabelComponent>
-							<div className="text-sm">
-								<LinkComponent href="#">Forgot password?</LinkComponent>
-							</div>
 						</RowComponent>
-						<div className="mt-2">
+					</RowComponent>
+					<RowComponent direction="column">
+						<RowComponent justify="between">
+							<LabelComponent htmlFor="password">Password</LabelComponent>
+							<LinkComponent href="#" className="text-sm">
+								Forgot password?
+							</LinkComponent>
+						</RowComponent>
+						<RowComponent className="mt-2">
 							<InputComponent
 								id="password"
 								name="password"
@@ -46,14 +46,14 @@ export default function Login() {
 								required
 								autoComplete="current-password"
 							/>
-						</div>
-					</div>
+						</RowComponent>
+					</RowComponent>
 
-					<div>
+					<RowComponent>
 						<ButtonComponent variant="contained" fullWidth type="submit">
 							Sign in
 						</ButtonComponent>
-					</div>
+					</RowComponent>
 				</form>
 
 				<p className="mt-10 text-center text-sm text-gray-500">

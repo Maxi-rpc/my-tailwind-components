@@ -1,6 +1,5 @@
 export interface RowProps extends React.HTMLAttributes<HTMLDivElement> {
 	children?: React.ReactNode;
-	customClass?: React.ComponentProps<"div">["className"];
 	itemsAlign?: "start" | "end" | "center" | "baseline" | "stretch";
 	justify?:
 		| "normal"
@@ -11,4 +10,5 @@ export interface RowProps extends React.HTMLAttributes<HTMLDivElement> {
 		| "around"
 		| "evenly"
 		| "stretch";
+	direction?: "row" | "column" | "row_reverse" | "column_reverse";
 }
