@@ -21,7 +21,7 @@ export default function Login() {
 				<form action="#" method="POST" className="space-y-6">
 					<RowComponent direction="column" className="w-full">
 						<LabelComponent htmlFor="email">Email address</LabelComponent>
-						<RowComponent className="mt-2">
+						<RowComponent className="mt-2 w-full">
 							<InputComponent
 								id="email"
 								name="email"
@@ -38,7 +38,7 @@ export default function Login() {
 								Forgot password?
 							</LinkComponent>
 						</RowComponent>
-						<RowComponent className="mt-2">
+						<RowComponent className="mt-2 w-full">
 							<InputComponent
 								id="password"
 								name="password"

@@ -3,9 +3,9 @@ import { RowProps } from "./Type";
 export const RowComponent = ({
 	children,
 	itemsAlign,
-	justify,
+	justify = "normal",
 	direction = "row",
-	className,
+	className = "",
 }: RowProps) => {
 	const itemVariant = {
 		start: "items-start",
@@ -33,10 +33,13 @@ export const RowComponent = ({
 		column_reverse: "flex-col-reverse",
 	};
 
+	const classJustifyVariant = justify ? justifyVariant[justify] : "";
+	const classItemVariant = itemsAlign ? itemVariant[itemsAlign] : "";
+
 	return (
 		<>
 			<div
-				className={`${className} flex ${directionVariant[direction]} ${itemVariant[itemsAlign]} ${justifyVariant[justify]}`}
+				className={`${className} flex ${directionVariant[direction]} ${classItemVariant} ${classJustifyVariant}`}
 			>
 				{children}
 			</div>
