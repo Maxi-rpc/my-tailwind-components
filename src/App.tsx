@@ -1,5 +1,6 @@
 import './App.css';
-import { Typography } from '@/components/ui';
+import { Typography } from '@/components/ui/typography';
+import { Button } from '@/components/ui/button';
 
 const App = () => {
   return (
@@ -8,6 +9,7 @@ const App = () => {
       <p>Start building amazing things with Rsbuild.</p>
       <p className='bg-red-700'>Hola mundo! TWS</p>
       <Typography>Componente importado</Typography>
+      <Button color='primary' flat>Click me!</Button>
     </div>
   );
 };
