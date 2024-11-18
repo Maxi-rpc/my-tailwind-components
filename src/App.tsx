@@ -9,7 +9,7 @@ const App = () => {
       <p>Start building amazing things with Rsbuild.</p>
       <p className='bg-red-700'>Hola mundo! TWS</p>
       <Typography>Componente importado</Typography>
-      <Button color='primary' flat>Click me!</Button>
+      <Button>Click me!</Button>
     </div>
   );
 };
