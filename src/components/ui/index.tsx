@@ -1,2 +1,2 @@
-export { Typography } from './typography';
-export { Button } from './button';
+export { Typography } from './Typography/Typography';
+export { Button } from './Button/Button';

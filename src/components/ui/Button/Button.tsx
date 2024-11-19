@@ -38,8 +38,9 @@ type ButtonVariants = VariantProps<typeof button>;
  
 interface ButtonProps extends ButtonVariants {
   children: React.ReactNode;
+  onClick?: () => {};
 }
  
 export const Button = (props: ButtonProps) => {
-  return <button className={button(props)}>{props.children}</button>;
+  return <button onClick={props.onClick} className={button(props)}>{props.children}</button>;
 };
