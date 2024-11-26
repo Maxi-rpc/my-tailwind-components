@@ -25,11 +25,47 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
   args: {
     color: 'primary',
+    variant: 'contained',
   },
 };
 
 export const Secondary: Story = {
   args: {
-    color: 'neutral',
+    color: 'secondary',
+    variant: 'contained',
+  },
+};
+
+export const Success: Story = {
+  args: {
+    color: 'success',
+    variant: 'contained',
+  },
+};
+
+export const Warning: Story = {
+  args: {
+    color: 'warning',
+    variant: 'contained',
+  },
+};
+
+export const Danger: Story = {
+  args: {
+    color: 'danger',
+    variant: 'contained',
+  },
+};
+
+export const Info: Story = {
+  args: {
+    color: 'info',
+    variant: 'contained',
+  },
+};
+
+export const Text: Story = {
+  args: {
+    variant: 'text',
   },
 };
