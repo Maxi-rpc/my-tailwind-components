@@ -15,7 +15,21 @@ const meta = {
   // More on argTypes: https://storybook.js.org/docs/api/argtypes
 
   // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
-  args: { onClick: fn(), children: 'Click me' },
+  args: { onClick: fn(), label: 'Click me' },
+  argTypes: {
+    color: {
+      options: ['primary', 'secondary', 'success', 'warning', 'danger', 'info'],
+      control: { type: 'select' },
+    },
+    variant: {
+      options: ['text', 'contained', 'outlined'],
+      control: { type: 'select' },
+    },
+    size: {
+      options: ['sm', 'md', 'lg'],
+      control: { type: 'select' },
+    },
+  },
 } satisfies Meta<typeof Button>;
 
 export default meta;
@@ -26,46 +40,6 @@ export const Primary: Story = {
   args: {
     color: 'primary',
     variant: 'contained',
-  },
-};
-
-export const Secondary: Story = {
-  args: {
-    color: 'secondary',
-    variant: 'contained',
-  },
-};
-
-export const Success: Story = {
-  args: {
-    color: 'success',
-    variant: 'contained',
-  },
-};
-
-export const Warning: Story = {
-  args: {
-    color: 'warning',
-    variant: 'contained',
-  },
-};
-
-export const Danger: Story = {
-  args: {
-    color: 'danger',
-    variant: 'contained',
-  },
-};
-
-export const Info: Story = {
-  args: {
-    color: 'info',
-    variant: 'contained',
-  },
-};
-
-export const Text: Story = {
-  args: {
-    variant: 'text',
+    size: 'md',
   },
 };
