@@ -1,6 +1,7 @@
 type ButtonProps = {
   label: string;
   size?: 'sm' | 'md' | 'lg';
+  color?: 'primary' | 'secondary' | 'info' | 'warning' | 'success' | 'error';
 };
 
 const sizeClasses = {
@@ -9,10 +10,15 @@ const sizeClasses = {
   lg: 'px-5 py-3 text-lg',
 };
 
-export const Button = ({ label, size = 'md' }: ButtonProps) => {
-  return (
-    <button className={`bg-blue-600 text-white rounded hover:bg-blue-700 transition ${sizeClasses[size]}`}>
-      {label}
-    </button>
-  );
+const colorClasses = {
+  primary: 'bg-blue-600 hover:bg-blue-700 text-white',
+  secondary: 'bg-gray-600 hover:bg-gray-700 text-white',
+  info: 'bg-cyan-600 hover:bg-cyan-700 text-white',
+  warning: 'bg-yellow-500 hover:bg-yellow-600 text-black',
+  success: 'bg-green-600 hover:bg-green-700 text-white',
+  error: 'bg-red-600 hover:bg-red-700 text-white',
+};
+
+export const Button = ({ label, size = 'md', color = 'primary' }: ButtonProps) => {
+  return <button className={`rounded transition ${sizeClasses[size]} ${colorClasses[color]}`}>{label}</button>;
 };
